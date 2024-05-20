@@ -1,8 +1,6 @@
-FROM ubuntu:14.04 
+FROM ubuntu:latest
 
-RUN apt-get update && \
-  apt-get -y install clamav-daemon && \
-  freshclam
+RUN apt-get update && apt-get -y install clamav-daemon && freshclam
 
 RUN mkdir -p /var/run/clamav
 
